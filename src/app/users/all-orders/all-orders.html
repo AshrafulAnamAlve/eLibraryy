@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-content>
+        <h1>Order with Pending Return (1)</h1>
+
+        <button mat-raised-button color="accent" (click)="sendEmail()">Send Email About Pending Return</button>
+        <button mat-raised-button color="accent" (click)="blockUsers()">Block Order Due Users</button>
+    </mat-card-content>
+
+    <mat-card-footer>
+        @if(showProgressBar){
+            <mat-progress-bar mode="indeterminate" color="accent">
+
+        </mat-progress-bar>
+        }
+    </mat-card-footer>
+</mat-card>
+
+<page-table [columns]="columnsForPendingReturns" [dataSource]="orderWithPendingReturn">
+
+</page-table>
+
+<mat-card>
+    <mat-card-content>
+        <h1>Order With Completed Return (2)</h1>
+    </mat-card-content>
+</mat-card>
+
+<page-table [columns]="columnsForCompletedReturns" [dataSource]="orderWithCompletedReturn">
+
+</page-table>
