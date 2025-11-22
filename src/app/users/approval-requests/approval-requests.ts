@@ -29,7 +29,7 @@ export class ApprovalRequests {
     this.apiService.approveRequest(user.id).subscribe({
       next: (res)=>{
         if(res ==='approved'){
-          this.snackBar.open(`Approved for ${user.id}`,'OK');
+          this.snackBar.open(`Approved for ${user.firstName}`,'OK');
         }else this.snackBar.open(`Not Approved`,'OK');
       }
     })

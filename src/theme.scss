@@ -2,8 +2,8 @@
 
 // Material এর প্যালেট গুলো mat-palette দিয়ে ডিফাইন করতে হবে
 
-$primary-palette: mat.define-palette(mat.$indigo-palette);
-$accent-palette: mat.define-palette(mat.$pink-palette, 200, 100, 400);
+// $primary-palette: mat.define-palette(mat.$teal-palette, 500);
+// $accent-palette: mat.define-palette(mat.$pink-palette, 200, 100, 400);
 
 $my-theme: mat.define-light-theme((
   color: (
