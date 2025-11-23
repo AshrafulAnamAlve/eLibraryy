@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
           tokenGetter: () => {
             return localStorage.getItem('access_token');
           },
-          allowedDomains: ['localhost:7273'],
+          allowedDomains: ['api-lib-ashraful.runasp.net'],
         },
       })
     ),

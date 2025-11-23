@@ -41,7 +41,11 @@ export class RegisterComponent {
     };
 
   this.apiService.register(user).subscribe({
-    next: (res) => this.snackBar.open(res, 'OK', { duration: 3000 }),
+    next: (res) => {
+      if(res === 'Email already exists'){
+        this.snackBar.open('This Email Is already register','Ok',{duration: 3000})
+      }
+    },
     error: (err) => this.snackBar.open('Registration failed', 'OK', { duration: 3000 })
   });
 }
